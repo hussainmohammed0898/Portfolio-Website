@@ -102,6 +102,11 @@ img{
         padding-left:  var(--sidbar-width);
     }
 }
+@media (max-width:361px){
+    .responsive-anchor{
+        display: none;
+    }
+}
 
 /* BTN */
 .btn{
