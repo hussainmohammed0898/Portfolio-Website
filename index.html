@@ -256,21 +256,30 @@
                     </div>
                
                     <div class="col-lg-8" data-aos="fade-up" data-aos-delay="300">     
-                <form action="#" class="row g-lg-3 gy-3">
+                <form action="success.html" class="row g-lg-3 gy-3">
                     <div class="form-group col-md-6">
-                        <input type="text" class="form-control" placeholder="Enter your name">
+                        <input type="text" class="form-control" id="name" placeholder="Enter your Full Name" onkeyup="validateName()" required>
+                        <span id="name-error" class="alert-message"></span>
                     </div>
                     <div class="form-group col-md-6">
-                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <input type="number" class="form-control" id="phone-number" placeholder="Enter your mobile number" onkeyup="validatePhoneNumber ()" required>
+                        <span id="number-error" class="alert-message"></span>
                     </div>
                     <div class="form-group col-md-12">
-                        <input type="text" class="form-control" placeholder="Enter your subject">
+                        <input type="email" class="form-control" id="email" placeholder="Enter your Email-Address" onkeyup="validateEmail()" required>
+                        <span id="email-error" class="alert-message"></span>
                     </div>
                     <div class="form-group col-md-12">
-                       <textarea name="" rows="4" class="form-control" placeholder="Enter your message"></textarea>
+                        <input type="text" class="form-control" id="subject" placeholder="Enter your subject" onkeyup="validateSubject()" required>
+                        <span id="subject-error" class="alert-message"></span>
+                    </div>
+                    <div class="form-group col-md-12">
+                       <textarea name="" rows="4" class="form-control" id="message" placeholder="Enter your message" onkeyup="validateMessage()" required></textarea>
+                       <span id="message-error" class="alert-message"></span>
                     </div>
                     <div class="form-group col-md-12 d-grid">
-                        <button type="submit" class="btn btn-brand">Contact me</button>
+                        <button type="submit" class="btn btn-brand " id="submit" onclick="return handleSubmit()">Contact me</button>
+                        <span id="submit-error" class="alert-message"></span>
                     </div>
                 </form>
               </div>
